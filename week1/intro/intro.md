@@ -9,10 +9,19 @@
 
 ## Office Hour
 
-- Lets play a game!
+- Q & A
+- Introductions
+
+
+## Objectives 
+
+- Use python to create variables
+- Recognize data types and their uses in python programming
+- Manipulate strings using some of the amazing built in functions of python
 
 ## Lecture
 
+- Downloading Python
 
 - Syntax
     * Indentation REALLY matters
@@ -46,9 +55,9 @@
         * =
         * == (is can also be used, but not when comparing strings)
     * Logical
-        * or
-        * and
-        * not
+        * or -> ||
+        * and -> &&
+        * not -> !
 
 
 ### Numbers
@@ -81,6 +90,6 @@
     * center
     * rjust
 
-- accessing strings --> Strings are arrays!!!
+- accessing strings --> Strings are tuples!!!
 - built in slice syntax --> stringname[start:end]
 
