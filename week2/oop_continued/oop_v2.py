@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 # Classes - Syntax
 class class_name:
     pass
@@ -18,11 +20,11 @@ class Meta:
         self.health = 100
         metas.append(self) # Adds instance to metas list above upon creation    
 # methods -> actions a class can perform
-    def get_name(self):
+    def get_name(self) -> str:
         print(self.name)
         return self.name
     
-    def attack(self,meta):
+    def attack(self,meta) -> Meta :
         if isinstance(meta, Meta ):
             meta.health -= 5
             return self
@@ -30,7 +32,7 @@ class Meta:
             print("Argument must be instance of Meta class")
             
     
-    def display_powers(self):
+    def display_powers(self) -> None:
         print(self)
         print("Powers".center(20,"_"))
         for power in self.powers:
