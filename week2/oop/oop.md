@@ -12,7 +12,24 @@
 - Q&A
 - DUNDER
 
+## Vocabulary
+
+- Polymorphism
+- Encapsulation
+- Abstraction
+- Inheritance
+- constructor
+- methods
+- properties
+- instance
 ## Lecture
+
+### Objectives
+
+- Understand the basics of using OOP
+- Recognize the differences of functional programming from OOP
+- Understand concepts like instances, properties/(member variables) and methods
+- build your own class 
 
 ### 4 Pillars Of Oop
 
@@ -44,3 +61,5 @@
 - functions connected to instances
 - helper functions
 - getters & setters
+
+
