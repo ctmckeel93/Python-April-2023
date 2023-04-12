@@ -24,13 +24,12 @@ class Meta:
         print(self.name)
         return self.name
     
-    def attack(self,meta) -> Meta :
+    def attack(self, meta: Meta) -> Meta :
         if isinstance(meta, Meta ):
             meta.health -= 5
-            return self
         else:
             print("Argument must be instance of Meta class")
-            
+        return self
     
     def display_powers(self) -> None:
         print(self)
@@ -45,6 +44,9 @@ class Meta:
         self.display_powers()
         print(f"Nemesis: {self.nemesis}")
         print(f"Health: {self.health}\n")
+
+meta1 = Meta("Guy", "Guy One", "Blue", [])
+meta1.attack().attack()
 
 
 # classmethod
