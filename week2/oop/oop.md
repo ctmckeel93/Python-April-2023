@@ -22,6 +22,7 @@
 - methods
 - properties
 - instance
+
 ## Lecture
 
 ### Objectives
@@ -61,5 +62,3 @@
 - functions connected to instances
 - helper functions
 - getters & setters
-
-
