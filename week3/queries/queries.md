@@ -26,7 +26,7 @@
 - INSERT INTO table (columns) VALUES (data);
 - Error code 1054: Unknown column error
 
-### Select (Read)
+### Select (Read OR Find)
 
 - SELECT columns FROM table [WHERE condition] [] means optional 
 - ORDER BY
@@ -43,3 +43,4 @@ DELETE FROM table WHERE condition
 
 - Making a new table
 - foreign keys and constraints
+
