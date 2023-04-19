@@ -17,7 +17,7 @@
 ### Objectives
 
 - Understand on a basic level how SQL works
-- Understand INSERT,SELECT,UPDATE,DELET
+- Understand INSERT,SELECT,UPDATE,DELETE
 - Be able to write your own queries
 - Have a starting point to branch out if you are interested in database coding languages like SQL
 
