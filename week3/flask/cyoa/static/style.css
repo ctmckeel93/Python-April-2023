@@ -1,0 +1,44 @@
+:root {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+} 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('./images/compass.png') ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a {
+    background-color: rgba(0, 0, 0, 0.219);
+    color: rgb(196, 239, 247);
+    font-style: italic;
+}
+
+p {
+    margin: 50px auto;
+    width: 60%;
+    height: 500px;
+    padding: 10px;
+    line-height: 50px;
+    border: 20px double rgb(93, 44, 7);
+    background-color: rgb(241, 146, 99);
+    font-style: italic;
+    color: rgb(81, 31, 5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    border-radius: 30px;
+}
