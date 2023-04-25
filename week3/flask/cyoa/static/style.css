@@ -1,5 +1,5 @@
 :root {
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family:monospace;
 } 
 
 * {
@@ -28,12 +28,15 @@ p {
     margin: 50px auto;
     width: 60%;
     height: 500px;
-    padding: 10px;
+    padding: 15px;
+    font-weight: 700;
+    font-size: medium;
+    letter-spacing: 2px;
     line-height: 50px;
-    border: 20px double rgb(93, 44, 7);
-    background-color: rgb(241, 146, 99);
+    border: 20px double #202020;
+    background-color: #ffd100;
+    color: #333533;
     font-style: italic;
-    color: rgb(81, 31, 5);
 
     display: flex;
     justify-content: center;
