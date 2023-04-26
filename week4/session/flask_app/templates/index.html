@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 style="color:red;">{{session.error}}</h2>
+    <h1>My First Form</h1>
+    <form action="process" method="POST">
+        <div>
+            <label for="gundam_name">Name:</label>
+            <input name="gundam_name" type="text">
+        </div>
+        <div>
+            <label for="model_number">Model number</label>
+            <input name="model_number" type="number">
+        </div>
+        <div>
+            <label for=""></label>
+            <select name="hobbies" id="hobbies">
+                <option>Training</option>
+                <option>Long flights through space</option>
+                <option>Chillin in the Hangar</option>
+                <option>Sword fights with the pals</option>
+            </select>
+        </div>
+        <label for="color">Color</label>
+        <input name="color" type="color">
+        <button>Submit</button>
+    </form>
+</body>
+</html>
