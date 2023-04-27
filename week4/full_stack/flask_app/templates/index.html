@@ -5,8 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    {{ bootstrap.load_css()}}
 </head>
 <body>
-    <h1>Hello World</h1>
+    <div class="container text-center">
+        
+        <table class="table table-dark">
+            <h1>My pizzas</h1>
+            <tr>
+                <th>Name</th>
+                <th>Crust</th>
+                <th>Size</th>
+                <th>Sauce</th>
+                <th>Number of Toppings</th>
+            </tr>
+            {% for pizza in pizzas: %}
+            {{ pizza.pizza_type }}
+            <tr>
+                    <td>{{pizza.pizza_crust}}</td>
+                    <td>{{pizza.pizza_size}}</td>
+                    <td>{{pizza.pizza_sauce}}</td>
+                    <td>{{pizza.amount_of_toppings}}</td>
+                    <td>{{pizza.pizza_type}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
 </body>
 </html>

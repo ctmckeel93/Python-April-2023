@@ -9,7 +9,7 @@
 
 ## Office Hour
 
-- TBD
+- Establish a workflow
 
 ## Lecture
     

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    {{ bootstrap.load_css() }}
+    <style>
+        .btn-primary {
+            background-color: magenta;
+        }
+
+        .btn-primary:hover {
+            background-color: rgba(214, 132, 214, 0.859);
+        }
+
+        .btn-secondary {
+            background-color: aqua;
+            color: orangered
+        }
+
+        button {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="#">
+            <div class="col-6 d-flex flex-column">
+                <select onchange="alert(this.value)" name="completion" id="completion">
+                    <option selected>Incomplete</option>
+                    <option>Complete</option>
+                </select>
+                <label for="label">Its a label</label>
+                <input type="text">
+                <label for="label">Its a label</label>
+                <input type="text">
+                <label for="label">Its a label</label>
+                <input type="text">
+                <label for="label">Its a label</label>
+                <input type="text">
+                <label for="label">Its a label</label>
+                <input type="text">
+                <label for="label">Its a label</label>
+                <input type="text">
+                <button class="btn btn-primary">Submit</button>
+                <button class="btn btn-secondary">Submit</button>
+                <button class="btn btn-warning">Submit</button>
+                <button class="btn btn-danger">Submit</button>
+                <button class="btn btn-success">Submit</button>
+                <button class="btn btn-light">Submit</button>
+                <button class="btn btn-dark">Submit</button>
+                <button class="btn btn-primary" style="background-color: black;">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
