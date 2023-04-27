@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {{ bootstrap.load_css()}}
+</head>
+<body>
+    <div class="container my-5">
+        <h1>Puppies!</h1>
+        <table class="table table-dark table-striped table-hover p-3 text-center">
+            <thead>
+                <th scope="col">Name</th>
+                <th scope="col">Breed</th>
+                <th scope="col">Age</th>
+                <th scope="col">Happy?</th>
+            </thead>
+            <tbody>
+                {% for dog in dogs: %}
+                <tr>
+                    <td>{{dog.name}}</td>
+                    <td>{{dog.breed}}</td>
+                    <td>{{dog.age}}</td>
+                    <td>{{"Yes" if dog.ishappy == True else "No"}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
