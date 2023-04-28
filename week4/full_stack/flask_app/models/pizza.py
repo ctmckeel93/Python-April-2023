@@ -31,5 +31,34 @@ class Pizza():
         print("-------------------------------------------------------------------------------")
         print(pizzas) # List of clas objects
         return pizzas
+    
+    @classmethod
+    def get_one(cls, data):
+        # data = {"id": id_value}
+        query = "SELECT * FROM pizzas WHERE id = %(id)s;"
+        
+        results = connectToMySQL(cls.db).query_db(query, data)
+        new_pizza = cls(results[0]) # [{our pizza}]
+        
+        return new_pizza
+    
+    @classmethod
+    def create_pizza(cls, data):
+        
+        query = "INSERT INTO pizzas (pizza_type, pizza_crust, pizza_size, pizza_sauce, amount_of_toppings) VALUES (%(pt)s,%(pc)s,%(psz)s,%(ps)s,%(t)s);"
+        
+        results = connectToMySQL(cls.db).query_db(query, data)
+        
+        return results
+    
+    @classmethod 
+    def update_pizza(cls, data):
+        query = "UPDATE pizzas SET pizza_type=%(pt)s, pizza_crust=%(pc)s, pizza_size=%(psz)s, pizza_sauce=%(ps)s, amount_of_toppings=%(t)s WHERE id=%(id)s;"
+        connectToMySQL(cls.db).query_db(query, data)
+        
+    @classmethod
+    def delete_pizza(cls, data):
+        query = "DELETE FROM pizzas WHERE id = %(id)s;"
+        connectToMySQL(cls.db).query_db(query, data)
         
         

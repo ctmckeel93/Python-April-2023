@@ -15,7 +15,7 @@ def index():
         Dog("Shadow", "Golden Retriever", 16, True),
         Dog("Buddy", "Golden Retriever", 10, True),
     ]
-    return render_template("index.html", dogs=dogs)
+    return render_template("index.html", dog_list=dogs)
 
 
 if __name__ == "__main__":
