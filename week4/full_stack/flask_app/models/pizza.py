@@ -1,4 +1,5 @@
 from flask_app.config.mysqlconnection import connectToMySQL
+from flask_app.models.customer import Customer
 
 # data = {
 #     "id": 1,
@@ -35,6 +36,7 @@ class Pizza():
     @classmethod
     def get_one(cls, data):
         # data = {"id": id_value}
+        cust = Customer.get_all()
         query = "SELECT * FROM pizzas WHERE id = %(id)s;"
         
         results = connectToMySQL(cls.db).query_db(query, data)
@@ -45,7 +47,7 @@ class Pizza():
     @classmethod
     def create_pizza(cls, data):
         
-        query = "INSERT INTO pizzas (pizza_type, pizza_crust, pizza_size, pizza_sauce, amount_of_toppings) VALUES (%(pt)s,%(pc)s,%(psz)s,%(ps)s,%(t)s);"
+        query = "INSERT INTO pizzas (pizza_type, pizza_crust, pizza_size, pizza_sauce, amount_of_toppings, customer_id) VALUES (%(pt)s,%(pc)s,%(psz)s,%(ps)s,%(t)s,%(customer_id)s);"
         
         results = connectToMySQL(cls.db).query_db(query, data)
         
