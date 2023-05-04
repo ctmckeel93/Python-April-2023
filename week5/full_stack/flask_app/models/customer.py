@@ -58,9 +58,9 @@ class Customer():
     def get_one(cls,data):
         
         query = """SELECT * FROM customers
-                    JOIN pizzas ON 
+                    LEFT JOIN pizzas ON 
                     pizzas.customer_id = customers.id
-                    WHERE id=%(id)s;"""
+                    WHERE customers.id=%(id)s;"""
                     
         results = connectToMySQL(cls.db).query_db(query,data)
         

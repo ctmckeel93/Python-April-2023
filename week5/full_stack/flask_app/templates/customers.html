@@ -9,7 +9,6 @@
 <body>
     <h1>All customers</h1>
     <div class="container">
-        {% for customer in customer_list %}
             <h3>{{customer.name}}</h3>
             {% for pizza in customer.pizzas %}
                 <ul>
@@ -22,8 +21,6 @@
                     <li>{{pizza.amount_of_toppings}}</li>
                 </ul>
             {% endfor%}
-
-        {% endfor %}
     </div>
 </body>
 </html>
