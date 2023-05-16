@@ -18,40 +18,11 @@ class Customer():
         results = connectToMySQL(cls.db).query_db(query)
         all_customers = []
         
-        for c in results:
-            all_customers.append(cls(c))
+        for row in results:
+            all_customers.append(cls(row))
         return all_customers    
         
     
-    @classmethod
-    def get_all_with_pizzas(cls):
-        
-        query = """SELECT * FROM customers
-                    JOIN pizzas ON 
-                    pizzas.customer_id = customers.id;"""
-        
-        results = connectToMySQL(cls.db).query_db(query)
-        all_customers = []
-        for row in results:
-            
-            pizza_data = {
-                "id": row["pizzas.id"],
-                "pizza_type": row["pizza_type"],
-                "pizza_crust": row["pizza_crust"],
-                "pizza_size": row["pizza_size"],
-                "pizza_sauce": row["pizza_sauce"],
-                "amount_of_toppings": row["amount_of_toppings"],
-                "created_at": row["pizzas.created_at"],
-                "updated_at": row["pizzas.updated_at"]
-            }
-            
-
-            c = cls(row)
-            c.pizzas.append(pizza.Pizza(pizza_data))
-            all_customers.append(c)
-            
-            
-        return all_customers
     
     # Added after lecture. Use for reference
     @classmethod
@@ -79,6 +50,6 @@ class Customer():
                 "updated_at": row["pizzas.updated_at"]
             }
             
-            customer.pizzas.append(pizza.Pizza(pizza_data))
+            customer.pizzas.append(pizza.Pizza(pizza_data)) # Pizza(pizza_data)
             
         return customer
