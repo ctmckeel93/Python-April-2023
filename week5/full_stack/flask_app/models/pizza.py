@@ -1,5 +1,6 @@
 from flask_app.config.mysqlconnection import connectToMySQL
 from flask_app.models.customer import Customer
+from flask import flash
 
 # data = {
 #     "id": 1,
@@ -23,7 +24,7 @@ class Pizza():
         query = "SELECT * FROM pizzas;"
         
         results = connectToMySQL(cls.db).query_db(query)
-        print(results)
+        # print(results)
         pizzas = [] # This will hold all of our instances
         for pizza in results:
             new_pizza = cls(pizza) # Pizza(pizza_dict)
@@ -62,5 +63,29 @@ class Pizza():
     def delete_pizza(cls, data):
         query = "DELETE FROM pizzas WHERE id = %(id)s;"
         connectToMySQL(cls.db).query_db(query, data)
+        
+    @staticmethod
+    def is_valid(pizza_dict):
+        print("Pizza from controller:", pizza_dict)
+        is_valid = True
+        
+        if len(pizza_dict["pt"]) < 3:
+            is_valid = False
+            flash("Pizza Type must be at least 3 characters", category="pizza")
+        if len(pizza_dict["pc"]) < 3:
+            is_valid = False
+            flash("Pizza Crust must be at least 3 characters", category="pizza")
+        if len(pizza_dict["psz"]) < 2:
+            is_valid = False
+            flash("Pizza Size must be at least 2 characters", category="pizza")
+        if len(pizza_dict["ps"]) < 3:
+            is_valid = False
+            flash("Pizza Sauce must be at least 3 characters", category="pizza")
+        if int(pizza_dict["t"]) < 1:
+            print("Not enough toppings!")
+            is_valid = False
+            flash("Pizza must have at least 1 topping", category="pizza")
+        return is_valid
+            
         
         

@@ -19,8 +19,14 @@ def process():
         "t": request.form["amount_of_toppings"],
         "customer_id": request.form["customer_id"]
     }
+    
     if request.form["which_form"] == "create":
-        id = pizza.Pizza.create_pizza(data)
+        print("Pizza Data",data)
+        if pizza.Pizza.is_valid(data):
+            pizza.Pizza.create_pizza(data)
+        else:
+            print("Data not valid")
+            return redirect("/")
     else:
         data = {
             "id": request.form["id"],
