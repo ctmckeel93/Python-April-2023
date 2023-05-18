@@ -1,0 +1,13 @@
+
+{% extends "base.html" %}
+{% block title %}Hello{% endblock %}    
+{% block main %}
+    {{ super() }}\
+    {% block body %}
+    
+    {% endblock %} 
+
+{% block foot%}
+{{super()}}
+{% endblock %}
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% from "macros.html" import build_table with context %}
+{% block title %}Dashboard{% endblock %}    
+{% block main %}
+    {{ super() }}
+    {% block body %}
+    
+    {% block content %}
+    {{ build_table("Name", "Corey") }}
+    {% endblock %}
+    {% endblock %} 
+{% endblock %}

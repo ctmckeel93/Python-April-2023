@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <button onclick="getPokemon()">Click me for pokemon</button>
+    <div id="pokemon">
+
+    </div>
+    <script>
+        const localhost = "http://127.0.0.1:5000/"
+        async function getPokemon() {
+            let response = await fetch("http://127.0.0.1:5000/pokemon")
+            let data = await response.json()
+            console.log(data.results)
+
+            const div = document.getElementById("pokemon")
+
+            for(poke of data.results) {
+                let p = document.createElement("p")
+                p.innerText = poke.name
+                div.appendChild(p)
+            }
+
+            let all_pokemon = document.querySelectorAll("p")
+            for (poke_p of all_pokemon) {
+                console.log(poke_p)
+
+                poke_p.addEventListener("click", async (e) => {
+                    let response = await fetch(localhost + `pokemon/${e.target.innerText}`)
+                    let data = await response.json()
+                    console.log(data)
+                })
+            }
+        }
+    </script>
+</body>
+</html>

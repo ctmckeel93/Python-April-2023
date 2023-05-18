@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    padding: 20px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    width: 50%;
+    align-items: center;
+    gap: 20px;
+}
