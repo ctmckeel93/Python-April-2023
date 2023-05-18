@@ -1,7 +1,7 @@
 console.log("page loading...");
 
 var cookieDiv = document.querySelector(".cookie-policy");
-const API = 'ad19147a17d290864b375c566f1eb41e'
+const API = "You will need to get your own API Key from the website"
 
 
 
