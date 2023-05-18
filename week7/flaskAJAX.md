@@ -16,31 +16,29 @@
     
 ### Objectives
 
-- understand what an API is and its purpose
-- understand JSON objects
-- Understand promises
-- Use fetch to get data from an API
-- Dojo Weather with AJAX
+- Integrate apis and ajax with flask
 
-### APIs - Application Programming Interface
+### Setting up an api controller
 
-- Databases hosted online to access information
+- packages well need
+    - jsonify -> Comes with flask
+    - requests -> will need to be installed 
 
-### API Key
+### Using fetch from our js file to send requests to our server
+    
+    - async/await
+    - simplifying our process
 
-- Will differ depending on the website
+### considerations
 
-### JSON - Javascript Object Notation
+    - addEventListener
+    - querySelector
+    - createElement
+    - get all
+    - get one
+    
 
-- Universal format for passing data around on the web
 
-### Fetch
 
-- utilizes promises 
-- built in web API in javascript used to make requests across the web.
-
-### AJAX - Asynchronous Javascript
-
-- The better solution to promises
 
 
