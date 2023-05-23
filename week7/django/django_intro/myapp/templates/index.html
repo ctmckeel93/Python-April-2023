@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Create a thing</h1>
+    <form action="/process" method="post">
+        {% csrf_token %}
+        <label for="kind">Kind of Pizza</label>
+        <input type="text" name="kind">
+        <label for="size">Size</label>
+        <input type="text" name="size">
+        <label for="amount">Amount of boxes</label>
+        <input type="number" name="boxes">
+        <button>Gimme pizza!</button>
+    </form>
+</body>
+</html>

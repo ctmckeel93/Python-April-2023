@@ -2,9 +2,20 @@
 {% extends "base.html" %}
 {% block title %}Hello{% endblock %}    
 {% block main %}
-    {{ super() }}\
     {% block body %}
-    
+    <form action="/process" method="post">
+        <div>
+            <label for="category">Category</label>
+            <input type="text" name="category">
+        </div>
+        <div>
+            <label for="category">Price</label>
+            <input type="number" name="price">
+        </div>
+        <div>
+            <button>Submit</button>
+        </div>
+    </form>
     {% endblock %} 
 
 {% block foot%}

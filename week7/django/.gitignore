@@ -34,12 +34,13 @@ __pycache__/
 
 # Distribution / packaging
 .Python
-djangoenv/
+env/
 build/
 develop-eggs/
 dist/
 downloads/
 djangoenv/
+djangoenv/Lib/
 eggs/
 lib/
 lib64/

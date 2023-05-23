@@ -1,11 +1,19 @@
-{% macro build_table(header, value) %}
-
+{% macro build_table(list_of_objects) %}
 <table>
+    {% set headers = list_of_objects[0].get_keys() %}
+
     <tr>
-        <th>{{header}}</th>
+        {% for head in headers %}
+        <th>{{head}}</th>
+        {% endfor %}
     </tr>
+    {% for obj in list_of_objects %}
     <tr>
-        <td>{{value}}</td>
+        {% for key in obj.get_keys(): %}
+        <td>{{obj[key]}}</td>
+        {% endfor %}
     </tr>
+    {% endfor %}
 </table>
 {% endmacro %}
+
